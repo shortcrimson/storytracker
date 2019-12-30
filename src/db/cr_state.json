@@ -1,0 +1,60 @@
+{
+	"project": [
+		{
+			"name": "Pending",
+			"value": "10"
+		},
+		{
+			"name": "Open",
+			"value": "20"
+		},
+		{
+			"name": "Closed",
+			"value": "30"
+		}
+	],
+	"release": [
+		{
+			"name": "Pending",
+			"value": "10"
+		},
+		{
+			"name": "Open",
+			"value": "20"
+		},
+		{
+			"name": "Deployed",
+			"value": "30"
+		}
+	],
+	"story": [
+		{
+			"name": "Draft",
+			"value": "10"
+		},
+		{
+			"name": "Ready",
+			"value": "20"
+		},
+		{
+			"name": "In Progress",
+			"value": "30"
+		},
+		{
+			"name": "Testing",
+			"value": "40"
+		},
+		{
+			"name": "Review",
+			"value": "50"
+		},
+		{
+			"name": "Deploy",
+			"value": "60"
+		},
+		{
+			"name": "Closed",
+			"value": "70"
+		}
+	]
+}
