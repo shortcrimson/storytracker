@@ -22,7 +22,7 @@ router.post('/core/cr_state', async (req, res) => {
 router.delete('/core/cr_state', async (req, res) => {
 	try {
 		const states = await Cr_State.deleteMany({});
-		res.status(40).send(states);
+		res.status(400).send(states);
 	} catch (e) {
 		res.status(400).send(e);
 	}
