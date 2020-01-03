@@ -1,7 +1,6 @@
 //Mongoose - /Users/toby/mongodb/bin/mongod --dbpath=/Users/toby/mongodb-data
 const express = require ('express');
 require('./db/mongoose');
-
 const app = express();
 const port = process.env.port || 3000;
 
