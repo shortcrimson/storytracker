@@ -33,6 +33,32 @@ const Story = mongoose.model('Story', {
 	release: {
 		type: Schema.Types.ObjectId,
 		ref: 'Release'
+	},
+	project: {
+		type: Schema.Types.ObjectId,
+		ref: "Project"
+	},
+	theme: {
+		type: 'string',
+		trim: true
+	},
+	est_effort: {
+		type: 'number',
+		default: 0,
+		validate(value) {
+			if (value < 0) {
+				throw new Error('Estimated effort cannot be less than 0');
+			}
+		}
+	},
+	actual_effort: {
+		type: 'number',
+		default: 0,
+		validate(value) {
+			if (value < 0) {
+				throw new Error('Actual effort cannot be less than 0');
+			}
+		}
 	}
 });
 

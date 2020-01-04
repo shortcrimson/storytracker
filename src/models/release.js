@@ -16,6 +16,10 @@ const Release = mongoose.model('Release', {
 		type: 'number',
 		required: true,
 		default: 10
+	},
+	description: {
+		type: 'string',
+		trim: true
 	}
 });
 

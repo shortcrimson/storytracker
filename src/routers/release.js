@@ -38,7 +38,7 @@ router.get('/releases/:id', async (req, res) => {
 //Update
 router.patch('/releases/:id', async (req, res) => {
 	const updates = Object.keys(req.body);
-	const allowedUpdates = ['state', 'version_no'];
+	const allowedUpdates = ['state', 'version_no', 'description'];
 	const isValidOperation = updates.every(update => allowedUpdates.includes(update));
 	if (!isValidOperation) {
 		return res.status(400).send({ error: 'Invalid updates' });

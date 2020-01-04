@@ -38,7 +38,7 @@ router.get('/stories/:id', async (req, res) => {
 //Update
 router.patch('/stories/:id', async (req, res) => {
 	const updates = Object.keys(req.body);
-	const allowedUpdates = ['title', 'description', 'imp_details', 'priority', 'state'];
+	const allowedUpdates = ['title', 'description', 'imp_details', 'priority', 'state', 'theme', 'est_effort', 'actual_effort'];
 	const isValidOperation = updates.every(update => allowedUpdates.includes(update));
 	if (!isValidOperation) {
 		return res.status(400).send({ error: 'Invalid updates' });
