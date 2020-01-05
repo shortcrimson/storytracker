@@ -16,7 +16,7 @@ router.post('/stories', async (req, res) => {
 //Read
 router.get('/stories', async (req, res) => {
 	try {
-		const stories = await Story.find(req.query);
+		const stories = await Story.find(req.body);
 		res.send(stories);
 	} catch (e) {
 		res.status(500).send(e);

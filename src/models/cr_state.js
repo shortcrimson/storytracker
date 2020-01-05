@@ -14,7 +14,7 @@ const Cr_State = mongoose.model('Cr_State', {
 		type: 'string',
 		required: true,
 		validate (value) {
-			let validCollections = ['project', 'release', 'story'];
+			let validCollections = ['project', 'release', 'story', 'idea'];
 			if (!validCollections.includes(value)) {
 				throw new Error('Invalid collection name - ' + value);
 			}

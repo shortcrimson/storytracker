@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(require('./routers/story'));
 app.use(require('./routers/project'));
 app.use(require('./routers/release'));
+app.use(require('./routers/idea'));
 app.use(require('./routers/core'));
 
 app.get('/', function (req, res) {

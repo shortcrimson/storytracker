@@ -56,5 +56,19 @@
 			"name": "Closed",
 			"value": "70"
 		}
+	],
+	"idea": [
+		{
+			"name": "Draft",
+			"value": "10"
+		},
+		{
+			"name": "Closed",
+			"value": "20"
+		},
+		{
+			"name": "Cancelled",
+			"value": "30"
+		}
 	]
 }
