@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const stateValidator = require('../utils/stateValidator');
+const stValidationUtils = require('../utils/stValidationUtils');
 
 const Story = mongoose.model('Story', {
 	title: {
@@ -20,10 +20,11 @@ const Story = mongoose.model('Story', {
 	priority: {
 		type: 'number',
 		default: 3,
-		validate(value) {
-			if (value < 1 || value > 5) {
-				throw new Error('Priority must be a whole number between 1 and 5');
-			}
+		validate: {
+			validator: function(value) {
+				return stValidationUtils.choiceValidator('story', 'priority', value);
+			},
+			message: 'Provided priority value is not a valid choice'
 		}
 	},
 	state: {
@@ -32,7 +33,7 @@ const Story = mongoose.model('Story', {
 		default: 10,
 		validate: {
 			validator: function(value) {
-				return stateValidator('story', value);
+				return stValidationUtils.stateValidator('story', value);
 			},
 			message: 'Provided state is not defined - please select a value from the State collection'
 		}
@@ -47,7 +48,13 @@ const Story = mongoose.model('Story', {
 	},
 	theme: {
 		type: 'string',
-		trim: true
+		trim: true,
+		validate: {
+			validator: function(value) {
+				return stValidationUtils.choiceValidator('story', 'theme', value);
+			},
+			message: 'Provided theme is not a valid choice'
+		}
 	},
 	est_effort: {
 		type: 'number',

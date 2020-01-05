@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const stateValidator = require('../utils/stateValidator');
+const stValidationUtils = require('../utils/stValidationUtils');
 
 const Idea = mongoose.model('Idea', {
 	title: {
@@ -22,7 +22,7 @@ const Idea = mongoose.model('Idea', {
 		default: 10,
 		validate: {
 			validator: function(value) {
-				return stateValidator('idea', value);
+				return stValidationUtils.stateValidator('idea', value);
 			},
 			message: 'Provided state is not defined - please select a value from the State collection'
 		}

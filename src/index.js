@@ -9,7 +9,8 @@ app.use(require('./routers/story'));
 app.use(require('./routers/project'));
 app.use(require('./routers/release'));
 app.use(require('./routers/idea'));
-app.use(require('./routers/core'));
+app.use(require('./routers/core/cr_state'));
+app.use(require('./routers/core/cr_choice'));
 
 app.get('/', function (req, res) {
 	res.send('Hello, world!');

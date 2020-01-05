@@ -1,0 +1,56 @@
+{
+	"story": {
+		"priority": [
+			{
+				"name": "Critical",
+				"value": "1"
+			},
+			{
+				"name": "High",
+				"value": "2"
+			},
+			{
+				"name": "Moderate",
+				"value": "3"
+			},
+			{
+				"name": "Low",
+				"value": "4"
+			},
+			{
+				"name": "Nice to have",
+				"value": "5"
+			}
+		],
+		"theme": [
+			{
+				"name": "Database",
+				"value": "database"
+			},
+			{
+				"name": "Productivity",
+				"value": "productivity"
+			}
+		]
+	},
+	"cr_state": {
+		"collection_name": [
+			{
+				"name": "Project",
+				"value": "project"
+			},
+			{
+				"name": "Release",
+				"value": "release"
+			},
+			{
+				"name": "Story",
+				"value": "story"
+			},
+			{
+				"name": "Idea",
+				"value": "idea"
+			}
+		]
+	}
+}
